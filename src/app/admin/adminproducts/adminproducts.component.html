@@ -1,0 +1,22 @@
+<div class="container">
+<table class="table table-bordered table-striped mt-2 w-75 mx-auto" id="demo" >
+    <tr>
+        <th>No.</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Image</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let product of products; let i=index" >
+        <td>{{i+1}}</td>
+        <td>{{product.title}}</td>
+        <td>{{product.price}}</td>
+        <td><img  src="{{product.image}}" height="80" width="90"></td>
+        <td>
+            <a routerLink="/admin/products/{{product.id}}" class="btn btn-outline-success btn-sm">Edit</a> &nbsp;&nbsp;&nbsp;
+            <a (click)="deleteProduct(product.id)" class="btn btn-outline-danger btn-sm">Delete</a> &nbsp;&nbsp;&nbsp;
+
+        </td>
+    </tr>
+</table>
+</div>

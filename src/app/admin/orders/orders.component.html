@@ -1,0 +1,29 @@
+<div class="container">
+    <h1 class="m-3 text-center">Orders</h1>
+    <table class="table table-borderd table-striped ">
+        <tr>
+            <th>id</th>
+            <th>Date</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>pincode</th>
+            <th>email</th>
+            <th>phone no</th>
+            <th>price</th>
+        </tr>
+        <tr *ngFor="let data of orderdata">
+            <td>{{data.id}}</td>
+            <td>{{data.date | date:"longDate"}}</td>
+            <td>{{data.firstname}}</td>
+            <td>{{data.lastname}}</td>
+            <td>{{data.Address}}</td>
+            <td>{{data.city}}</td>
+            <td>{{data.pincode}}</td>
+            <td>{{data.phoneno}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.price | currency:"INR"}}</td>
+        </tr>
+    </table>
+</div>
